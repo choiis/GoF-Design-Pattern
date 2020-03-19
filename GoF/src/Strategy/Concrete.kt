@@ -1,44 +1,28 @@
 package Strategy
 
 
-class Add : Compositor {
-
-	public constructor() {
-
-	}
+class Add() : Compositor() {
 
 	override public fun compose(x: Int, y: Int): Int {
 		return x + y;
 	}
 }
 
-class Minus : Compositor {
-
-	public constructor() {
-
-	}
+class Minus() : Compositor() {
 
 	override public fun compose(x: Int, y: Int): Int {
 		return x - y;
 	}
 }
 
-class Multiply : Compositor {
-
-	public constructor() {
-
-	}
+class Multiply() : Compositor() {
 
 	override public fun compose(x: Int, y: Int): Int {
 		return x * y;
 	}
 }
 
-class Divide : Compositor {
-
-	public constructor() {
-
-	}
+class Divide() : Compositor() {
 
 	override public fun compose(x: Int, y: Int): Int {
 		return x + y;

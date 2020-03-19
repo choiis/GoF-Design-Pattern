@@ -1,14 +1,10 @@
 package Strategy
 
-class Composition {
+internal class Composition {
 
-	private var compositor: Compositor;
+	var compositor: Compositor;
 
 	public constructor(compositor: Compositor) {
-		this.compositor = compositor;
-	}
-
-	public fun setCompositor(compositor: Compositor) {
 		this.compositor = compositor;
 	}
 
