@@ -1,17 +1,22 @@
 package AbstractFactory
 
+import java.util.Scanner
+
 fun main(args: Array<String>) {
 
-	val fac1: ProductFactory = ConcreteFactory1();
-	val p1: AbstractProducer = fac1.produce();
-	val c1: AbstractConsumer = fac1.consume();
+	val sc: Scanner = Scanner(System.`in`);
+	val case: Int = sc.nextInt();
 
-	val fac2: ProductFactory = ConcreteFactory2();
-	val p2: AbstractProducer = fac2.produce();
-	val c2: AbstractConsumer = fac2.consume();
+	val fac: ProductFactory;
 
-	p1.ppp();
-	c1.ccc();
-	p2.ppp();
-	c2.ccc();
+	when (case) {
+		1 -> fac = ConcreteFactory1();
+		2, 4, 6, 8, 10 -> fac = ConcreteFactory2();
+		else -> fac = ConcreteFactory1();
+	}
+
+	val p: AbstractProducer = fac.produce();
+	val c: AbstractConsumer = fac.consume();
+	p.ppp();
+	c.ccc();
 }
