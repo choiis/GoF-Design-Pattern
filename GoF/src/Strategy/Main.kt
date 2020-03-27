@@ -2,14 +2,12 @@ package Strategy
 
 fun main(args: Array<String>) {
 
-	var com: Composition = Composition(Add());
+	var com1: Composition = Composition(Add());
+	println(com1.compose(5, 4));
+	println(com1.compose(Minus(), 10, 4));
 
-	println(com.compose(5, 4));
-	com.compositor = Minus(); //setter
-	println(com.compose(10, 4));
-	com.compositor = Multiply(); //setter
-	println(com.compose(9, 3));
-	com.compositor = Divide(); //setter
-	println(com.compose(50, 2));
+	var com2: Composition = Composition(Multiply());
+	println(com2.compose(10, 4));
+	println(com2.compose(Divide(), 10, 4));
 
 }
