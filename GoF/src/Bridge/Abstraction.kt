@@ -15,4 +15,8 @@ open class Abstraction {
 	protected fun printLength() {
 		impl.length();
 	}
+
+	public open fun printAll() {
+
+	}
 }
